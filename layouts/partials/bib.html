@@ -9,6 +9,7 @@
     {{ range sort $readings "key" }}
         {{ $key := index . "key" }}
         {{ $comment := index . "comment" }}
+
         {{ range where $data "id" $key }}
             {{ $title := index . "title" }}
             {{ $author := index . "author" }}
@@ -50,7 +51,9 @@
             {{ end }}
             </li>
         {{ end }}
+
     {{ end }}
     </ul>
+
 </div>
 {{ end }}
