@@ -12,7 +12,9 @@
     {{ $src = $src | path.Clean | relURL }}
 {{ end }}
 
-{{/* Setting the width of the figure is just a workaround: It should be possible to set the width/height of an image use a style for the img tag. However, hugo seems to gobble this somehow and adds a `style="width: auto; height: auto;"`, which is not quite helpful ... */}}
+{{/* Setting the width of the figure is just a workaround: It should be possible to set the width/height ... */}}
+{{/* ... of an image using a style for the img tag. However, Hugo (or some of our configuration) seems to ...  */}}
+{{/* ... gobble this somehow and adds a `style="width: auto; height: auto;"`, which is not quite helpful. */}}
 {{ with $src }}
 <figure class="center" style="width:{{- $width -}}">
     <img alt="{{- $title -}}" src="{{- $src -}}" class="{{- $class -}}" />
