@@ -16,7 +16,7 @@ outcomes:
     -   k2: "*foo*"
     -   k1: "fluppie"
 quizzes:
-    - l ink: "XYZ"
+    -   link: "XYZ"
         name: "Testquizz"
 assignments:
     -   topic: sheet01
