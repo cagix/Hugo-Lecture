@@ -26,6 +26,7 @@
 {{ $level := 2 }}
 {{ with .Scratch.Get "attachments_level" }}{{ $level = . }}{{ end }}
 
+
 {{ if or $attachments $pdf_files }}
 <div class="attachments">
     <h{{- $level -}}>{{- $header -}}</h{{- $level -}}>
