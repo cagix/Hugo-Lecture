@@ -42,7 +42,13 @@
         {{ $n := "(annotierter) Foliensatz" }}
         {{ with index . "name" }}{{ $n = . }}{{ end }}
         {{ with index . "link" }}
-            <li><a href="{{- . | safeURL -}}" target="_blank" rel="nofollow noopener noreferrer">{{- $n -}}</a></li>
+            {{ $url := urls.Parse . }}
+            {{ if $url.Scheme }}
+                {{ $url = $url.String }}
+            {{ else }}
+                {{ $url = printf "%s/%s" $.Page.File.Dir $url.Path | path.Clean | relURL }}
+            {{ end }}
+            <li><a href="{{- $url | safeURL -}}" target="_blank" rel="nofollow noopener noreferrer">{{- $n -}}</a></li>
         {{ end }}
     {{ end }}
     </ul>
