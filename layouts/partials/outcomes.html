@@ -1,11 +1,10 @@
 {{ $outcomes := .Params.outcomes }}
 
-{{ if $outcomes }}
+{{ if (and $outcomes (reflect.IsSlice $outcomes)) }}
+{{/* do not engage unless it's a list: workaround for use in lecture-cy */}}
 <div class="outcomes">
     <h2>Lernziele</h2>
 
-    {{ if reflect.IsSlice $outcomes }}
-    {{/* do not engage unless it's a list: workaround for use in lecture-cy */}}
     <ul>
     {{ range $outcomes }}
         {{ with index . "k1" }}<li>{{ print "(K1) " }}{{ . | $.RenderString }}</li>{{ end }}
@@ -14,7 +13,6 @@
         {{ with index . "k4" }}<li>{{ print "(K4) " }}{{ . | $.RenderString }}</li>{{ end }}
     {{ end }}
     </ul>
-    {{ end }}
 
 </div>
 {{ end }}
