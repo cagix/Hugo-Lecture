@@ -12,11 +12,12 @@ for creating and publishing teaching materials on
 
 This repo is intended to be included in the target project as a
 [Git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
-to partially overwrite the main theme, e.g. [hugo-theme-learn](https://github.com/matcornic/hugo-theme-learn).
+to partially overwrite the main theme, i.e. [Hugo Relearn Theme](https://github.com/McShelby/hugo-theme-relearn).
 
-This is a merge of the [Hugo-Lecture-Archetypes](https://github.com/cagix/Hugo-Lecture-Archetypes)
-and [Hugo-Lecture-Layouts](https://github.com/cagix/Hugo-Lecture-Layouts) repositories,
-which won't receive any further maintenance now.
+_Note_: This is a merge of the
+[Hugo-Lecture-Archetypes](https://github.com/cagix/Hugo-Lecture-Archetypes)
+and [Hugo-Lecture-Layouts](https://github.com/cagix/Hugo-Lecture-Layouts)
+repositories, which won't receive any further maintenance now.
 
 
 ## Contributing
