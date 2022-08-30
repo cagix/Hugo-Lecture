@@ -20,4 +20,8 @@ which won't receive any further maintenance now.
 
 ## License
 
-This work by [Carsten Gips](https://github.com/cagix), [Canan Yıldız](https://github.com/cyildiz), and [contributors](https://github.com/cagix/Hugo-Lecture/graphs/contributors) is licensed under [MIT](https://opensource.org/licenses/MIT).
+This [work](https://github.com/cagix/Hugo-Lecture) by
+[Carsten Gips](https://github.com/cagix),
+[Canan Yıldız](https://github.com/cyildiz), and
+[contributors](https://github.com/cagix/Hugo-Lecture/graphs/contributors)
+is licensed under [MIT](LICENSE.md).
