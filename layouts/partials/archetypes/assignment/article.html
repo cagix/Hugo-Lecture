@@ -5,9 +5,7 @@
 {{ partial "heading-pre.html" . }}<h1>{{ .Title }}</h1>{{ partial "heading-post.html" . }}
 
 
-{{ $lang := "" }}
-{{ if .Site.LanguagePrefix }}{{ $lang = .Site.Language.Lang | printf ".%s"  }}{{ end }}
-{{ $topic := (strings.TrimSuffix $lang .Page.File.BaseFileName) }}
+{{ $topic := .Page.File.TranslationBaseName }}
 
 {{ $schedule := .Site.Data.schedule }}
 {{ if .Site.LanguagePrefix }}
