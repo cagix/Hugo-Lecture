@@ -1,8 +1,9 @@
-{{ $youtube := .Params.youtube }}
+{{ $params := .Scratch.Get "params" }}
+{{ $linktext  := .Scratch.Get "linktext" }}
 
 <ul>
-{{ range $youtube }}
-    {{ $n := index . "name" | default "Direkt-Link YouTube" }}
+{{ range $params }}
+    {{ $n := index . "name" | default $linktext }}
 
     {{ with index . "link" }}
         <li><a href="{{- . | safeURL -}}" target="_blank" rel="nofollow noopener noreferrer">{{- $n -}}</a></li>
