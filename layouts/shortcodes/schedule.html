@@ -25,9 +25,7 @@
         {{ $misc_lecture := index $w "misc_lecture" }}
         {{ $misc_assignment := index $w "misc_assignment" }}
         <tr>
-            <td>
-                {{ printf "%s" $week }}
-            </td>
+            <td>{{ printf "%s" $week }}</td>
             <td>
             {{ if $datel }}{{- $datel -}}{{ end }}
             <ul>
