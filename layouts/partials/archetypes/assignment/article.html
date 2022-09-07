@@ -9,7 +9,6 @@
 {{ if .Site.LanguagePrefix }}{{ $lang = .Site.Language.Lang | printf ".%s"  }}{{ end }}
 {{ $topic := (strings.TrimSuffix $lang .Page.File.BaseFileName) }}
 
-{{ $assignments := .Params.assignments }}
 {{ $schedule := .Site.Data.schedule }}
 {{ if .Site.LanguagePrefix }}
     {{ $data := index .Site.Data .Site.Language.Lang }}
