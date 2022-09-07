@@ -1,5 +1,5 @@
 {{ $plan := .Site.Data.schedule }}
-{{ if .Site.LanguagePrefix }}
+{{ if .Site.IsMultiLingual }}
     {{ $data := index .Site.Data .Site.Language.Lang }}
     {{ $plan = $data.schedule }}
 {{ end }}
